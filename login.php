@@ -13,7 +13,15 @@ if(isset($_POST['submit'])){
    if(mysqli_num_rows($seleccionar_usuarios) > 0){
 
       $row = mysqli_fetch_assoc($seleccionar_usuarios);
+      
+      if($row['tipo_usuario'] == 'user'){
 
+         $_SESSION['user_name'] = $row['nombre'];
+         $_SESSION['user_email'] = $row['email'];
+         $_SESSION['usuario_id'] = $row['id'];
+         header('location:home.php');
+
+      }
       if($row['tipo_usuario'] == 'admin'){
 
          $_SESSION['admin_name'] = $row['nombre'];
@@ -21,15 +29,7 @@ if(isset($_POST['submit'])){
          $_SESSION['admin_id'] = $row['id'];
          header('location:admin_page.php');
 
-      }elseif($row['tipo_usuario'] == 'user'){
-
-         $_SESSION['user_name'] = $row['nombre'];
-         $_SESSION['user_email'] = $row['email'];
-         $_SESSION['user_id'] = $row['id'];
-         header('location:home.php');
-
       }
-
    }else{
       $message[] = 'contraseña o email incorrecto!';
    }

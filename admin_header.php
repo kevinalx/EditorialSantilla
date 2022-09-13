@@ -31,9 +31,9 @@ if(isset($message)){
       </div>
 
       <div class="account-box">
-         <p>username : <span><?php echo $_SESSION['admin_name']; ?></span></p>
+         <p>usuario : <span><?php echo $_SESSION['admin_name']; ?></span></p>
          <p>email : <span><?php echo $_SESSION['admin_email']; ?></span></p>
-         <a href="logout.php" class="delete-btn">cerrar sesion</a>
+         <a href="cerrarsesion.php" class="delete-btn">cerrar sesion</a>
          <div><a href="login.php">inicio de sesión</a> | <a href="registro.php">Registrar</a></div>
       </div>
 

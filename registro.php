@@ -66,10 +66,10 @@ if(isset($message)){
       <h3>Registrar</h3>
       <input type="text" name="nombre" placeholder="ingrese nombre" required class="box">
       <input type="email" name="email" placeholder="ingrese email" required class="box">
-      <input type="password" name="password" placeholder="ingrese contraseña" required class="box">
-      <input type="password" name="cpassword" placeholder="confirmar contraseña" required class="box">
+      <input type="password" name="contrasena" placeholder="ingrese contraseña" required class="box">
+      <input type="password" name="ccontrasena" placeholder="confirmar contraseña" required class="box">
       <select name="tipo_usuario" class="box">
-         <option value="user">usuario</option>
+         <option value="user">user</option>
          <option value="admin">admin</option>
       </select>
       <input type="submit" name="submit" value="Registrar" class="btn">
